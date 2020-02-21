@@ -1,0 +1,67 @@
+\documentclass[11pt, a4paper, twoside]{etc/pop/pop}
+\usepackage{url}
+\usepackage{listings}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{graphicx}
+
+\lstset{
+   backgroundcolor=\color{lightgray},
+   basicstyle=\ttfamily\footnotesize,
+   literate={·}{{\textperiodcentered}}1
+}
+
+\begin{document}
+\devnum{X.Y}
+\title{Title of the document}
+\version{[x.y]}
+\deadline{0}
+\level{PU - Public}
+\nature{R}
+
+\authors{
+   First Author (Inst),
+   Second Author (Inst), 
+   Third Author (Inst)
+}
+\contributors{
+   First Contributor (Inst),
+   Second Contributor (Inst),
+   Third Contributor (Inst)
+}
+\reviewers{
+   First Reviewer (Inst),
+   Second Reviewer (Inst),
+}
+\keywords{keyword-1, keyword-2, keyword-3, keyword-4, keyword-5.}
+
+\maketitle
+\nocite{*} % (XXX) To remove once bibliography is in place
+
+\begin{changelog}
+     \change{vx.y}{Author Name}{Comments, additions about this version of the document. The intent will be to allow make comments of more than one single sentence.}
+\end{changelog}
+
+\frontmatter
+
+\clearpage\newpage
+\input{tex/abstract}
+
+\newpage
+\input{tex/glossary}
+
+%\newpage
+%\addcontentsline{toc}{section}{List of Figures}
+%\listoffigures
+
+%\newpage
+%\addcontentsline{toc}{section}{List of Tables}
+%\listoftables
+
+\newpage
+\bibliographystyle{acm}
+\bibliography{bib/default}
+\addcontentsline{toc}{section}{References}
+
+\end{document}
